@@ -37,12 +37,11 @@ img {
     width: 1158px;
     padding: 0 15px 0 15px;
     margin: 0 auto;
-    
-    
-     
-
 }
-
+.section {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 .btn {
         padding: 12px 24px;
         border-radius: 4px;
@@ -172,12 +171,14 @@ img {
 .section-first {
     padding: 188px 0;
     background-color: var(--color-brend-durck);
-    
+    background-image: url('../images/people-office\ 1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .main-box {
     display: block;
-    /* padding-top: 188px;
-    padding-bottom: 188px; */
+ 
     justify-content: center;
 }
 

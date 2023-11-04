@@ -56,7 +56,7 @@
       <section class="section section-first">
        <div class="container main-box"> 
         <h1 class="main-title-bild">Effective Solutions for Your Business</h1>
-        <button type="button" class="btn main-btn">Order Service</button>
+        <button type="button" class="btn main-btn" data-modal-open>Order Service</button>
       </div>
     </section>
 
@@ -391,10 +391,10 @@
 
     <!-- MODAL WINDOW -->
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn" type="button" aria-label="Modal close button">
-          <svg class="modal-btn-icon" width="24" height="24" >
+        <button class="modal-btn" type="button" aria-label="Modal close button" data-modal-close>
+          <svg class="modal-btn-icon" width="8" height="8" >
             <use href="./images/icons.svg#icon-close-black-1"></use>
           </svg>
         </button>

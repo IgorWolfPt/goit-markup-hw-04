@@ -164,7 +164,7 @@ img {
     position: relative;
     display: block;
     padding: 24px 0;
-    color: var(--color-brend-durck);
+    color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -174,9 +174,9 @@ img {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    background-color: transparent;
+    background-color: #404bbf;
     position: absolute;
-    bottom: -1;
+    bottom: -1px;
     left: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -187,7 +187,7 @@ img {
 }
 
 .list-address {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -196,6 +196,7 @@ img {
     display: block;
     padding: 24px 0px;
     color: var(--color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-address:hover, 
@@ -380,13 +381,22 @@ img {
 
 }
 .social-item {
+    
+    
+    width: 40px;
+    height: 40px;
+    
+    
+    
+}
+.social-item-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: #4D5AE5;
+    background-color: var(--color-brend);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-team-text {
@@ -400,8 +410,8 @@ img {
 .social-icon {
    fill: var(--color-brend-light)   
 }
-.social-item:hover,
-.social-item:focus{
+.social-item-link:hover,
+.social-item-link:focus{
     background-color: var(--color-logo);
 }
 
@@ -567,6 +577,7 @@ img {
 .link-portfolio {
     display: block;
     padding-bottom: 32px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: border-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -613,6 +624,10 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+/* .link.portfolio-title-text:hover,
+.link.overlay-text:focus {
+    transform: translateY(0%);
+} */ 
  .portfolio-title {
      font-weight: 500;
      font-size: 20px;

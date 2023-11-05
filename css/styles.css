@@ -68,6 +68,9 @@ img {
 
 .section-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
     display: flex;
@@ -150,7 +153,7 @@ img {
     gap: 40px;
 }
 .list-text {
-    position: relative;
+    /* position: relative; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -158,13 +161,11 @@ img {
     color: var(--color-brend-durck);
 }
 .link-nav {
+    position: relative;
     display: block;
     padding: 24px 0;
     color: var(--color-brend-durck);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav::after {
@@ -175,24 +176,18 @@ img {
     border-radius: 2px;
     background-color: transparent;
     position: absolute;
-    bottom: 0;
+    bottom: -1;
     left: 0;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav:hover::after,
 .link-nav:focus::after,
 .link-nav:active::after {
-    background-color: var(--color-logo);
+    background-color: #404bbf;
 }
 
 .list-address {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -218,14 +213,13 @@ img {
 .section-first {
     padding: 188px 0;
     background-color: var(--color-brend-durck);
-    background-image: linear-gradient(var(--color-gray), var(--color-gray) ), url('../images/people-office\ 1.jpg');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office\ 1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 .main-box {
     display: block;
- 
     justify-content: center;
 }
 
@@ -254,10 +248,7 @@ img {
     padding: 16px 32px;  
     margin: 0 auto;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
      
 }
 
@@ -396,10 +387,7 @@ img {
     height: 40px;
     border-radius: 50%;
     background-color: #4D5AE5;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-team-text {
     text-align: center;
@@ -458,13 +446,14 @@ img {
 }
 .container-footer {
     display: flex;
+    align-items: baseline;
     justify-content: left;
-    align-items: center;
     gap: 120px;
 }
  
 .footer {    
-    display: block;   
+    display: block;  
+    margin-right: 120px;
 }
 
 .logo-footer {
@@ -476,6 +465,7 @@ img {
      color: #f4f4fd;
  }
  .list-footer {
+    gap: 16px;
     margin-bottom: 32px;
  }
 
@@ -532,10 +522,10 @@ img {
     background-color: var(--color-brend-light);
     color: var(--color-brend);
     border-color:  var(--color-border);
-    transition-property: color, background, border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .list-item-button {
@@ -564,24 +554,27 @@ img {
 
 
 .list-box-portfolio {
-    display: block;
+    /* display: block; */
     justify-content: center;
-    padding-bottom: 32px;
+    /* padding-bottom: 32px; */
     width: calc((100% - 24px * 2) / 3);
     border: 1px solid var(--color-border);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     
 }
 
 .link-portfolio {
+    display: block;
+    padding-bottom: 32px;
     transition-property: border-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
 }
 
-.list-box-portfolio:hover,
-.list-box-portfolio:focus {
+.link-portfolio:hover,
+.link-portfolio:focus {
     border-color: var(--color-brend-light);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
@@ -663,7 +656,7 @@ img {
    width: 100%;
    height: 100%;
    background-color: rgba(46, 47, 66, 0.40);
-   transition: opacity 400ms linear, visibility 400ms linear;
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .backdrop.is-hidden {
@@ -677,16 +670,16 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1);
+    transform:translate(-50%, -50%) scale(1);
     width: 408px;
     min-height: 584px;
     flex-shrink: 0;
     border-radius: 4px;
     background-color: var(--color-modal-window);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 400ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     
 
 }
@@ -703,16 +696,22 @@ img {
    justify-content: center;
    align-items: center;
    padding: 0;
-   background-color: transparent;
+   background-color: #e7e9fc;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   cursor: pointer;
    width: 24px;
    height: 24px;
-   border: none;
    border-radius: 50%;
-
-
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff
+ }
 .modal-btn-icon {
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     

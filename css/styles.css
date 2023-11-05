@@ -557,6 +557,7 @@ img {
     background: var(--OCEAN, #404BBF);
     color: #FFFFFF;
     border-color: transparent;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
                /* LIST PORTFOLIO */
@@ -569,6 +570,10 @@ img {
     width: calc((100% - 24px * 2) / 3);
     border: 1px solid var(--color-border);
 
+    
+}
+
+.link-portfolio {
     transition-property: border-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -606,8 +611,6 @@ img {
 
     background: var(--color-brend);
     padding: 40px 32px;
-
-
 }
 
 .overlay-text {

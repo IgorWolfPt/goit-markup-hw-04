@@ -171,7 +171,7 @@ img {
     position: relative;
     color: var(--color-logo);
 }
-.link-nav.corrent:after {
+.link-nav.corrent::after {
     display: block;
     position: absolute;
     content: "";
